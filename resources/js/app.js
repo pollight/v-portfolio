@@ -11,4 +11,14 @@ $(document).ready(function () {
         nav: true,
         items: 1,
     });
+
+    $('.burger').on('click', function () {
+        if($(this).hasClass('burger_active')) {
+            $(this).removeClass('burger_active');
+            $('.nav').removeClass('nav_burger-active');
+        } else {
+            $(this).addClass('burger_active');
+            $('.nav').addClass('nav_burger-active');
+        }
+    })
 });

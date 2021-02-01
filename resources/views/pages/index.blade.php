@@ -14,6 +14,12 @@
                 Вельяминов Г.М.
             </div>
 
+            <div class="header__burger burger">
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+            </div>
+
             <div class="header__nav nav">
                 <div class="nav__item">
                     <a href="#" class="nav__link nav__link_active">Главная</a>
