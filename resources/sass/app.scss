@@ -754,8 +754,11 @@ a {
             }
 
             @media screen and (max-width: 480px) {
-                width: calc(100%);
+                width: 100%;
+                max-width: 260px;
                 margin-bottom: 30px !important;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
@@ -784,6 +787,10 @@ a {
 
         @media screen and (max-width: 1024px) {
             max-width: 100%;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 5px;
         }
     }
 
