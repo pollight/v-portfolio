@@ -36,9 +36,9 @@
                 </div>
                 <div class="nav__item">
                     <div class="nav-local">
-                        <a href="#" class="nav-local__link nav__link nav__link_active">Ru</a>
+                        <a href="/" class="nav-local__link nav__link @if($locale == 'ru')nav__link_active@endif">Ru</a>
                         <span>/</span>
-                        <a href="/en" class="nav-local__link nav__link">En</a>
+                        <a href="/en" class="nav-local__link nav__link @if($locale == 'ru')nav__link_active@endif">En</a>
                     </div>
                 </div>
             </div>
