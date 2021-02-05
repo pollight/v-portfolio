@@ -482,14 +482,14 @@ a {
     &__title {
         color: #fff;
         margin-bottom: 58px;
-        font-size: 62px;
+        font-size: 62px !important;
 
         @media screen and (max-width: 1775px) {
-            font-size: 3.492957746vw;
+            font-size: 3.492957746vw !important;
         }
 
         @media screen and (max-width: 1024px) {
-            font-size: 28px;
+            font-size: 28px !important;
         }
 
     }
@@ -540,11 +540,11 @@ a {
 
     &__title {
         margin-bottom: 80px;
-        font-size: 62px;
+        font-size: 62px !important;
 
         @media screen and (max-width: 1775px) {
             margin-bottom: 4.507042254vw;
-            font-size: 3.492957746vw;
+            font-size: 3.492957746vw !important;
         }
 
         @media screen and (max-width: 2130px) {
@@ -552,7 +552,7 @@ a {
         }
 
         @media screen and (max-width: 1024px) {
-            font-size: 28px;
+            font-size: 28px !important;
         }
 
         @media screen and (max-width: 480px) {
