@@ -273,6 +273,7 @@ a {
     &__link {
 
         color: #000;
+        font-family: 'BasisGrotesqueProLight', sans-serif;
 
         @media screen and (max-width: 1024px) {
             color: #fff;
@@ -485,7 +486,7 @@ a {
     &__title {
         color: #fff;
         margin-bottom: 58px;
-        font-size: var(--text-medium-size);
+        font-size: var(--text-medium-size) !important;
 
     }
 
@@ -732,6 +733,7 @@ a {
 
     &_down-white {
         display: none;
+
         &:before {
             background-image: url('/img/arrow-down-white.svg');
         }
@@ -825,10 +827,10 @@ a {
 .owl-carousel {
     .owl-prev {
         position: absolute;
-        left: calc((100vw - (90vw - 2*7.042253521vw))/4 * -1);
+        left: calc((100vw - (90vw - 2 * 7.042253521vw)) / 4 * -1);
         top: 50%;
         margin-top: -9px;
-        transform: translate(-100%,-50%);
+        transform: translate(-100%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -858,10 +860,10 @@ a {
 
     .owl-next {
         position: absolute;
-        right: calc((100vw - (90vw - 2*7.042253521vw))/4 * -1);
+        right: calc((100vw - (90vw - 2 * 7.042253521vw)) / 4 * -1);
         top: 50%;
         margin-top: -9px;
-        transform: translate(100%,-50%);
+        transform: translate(100%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;
