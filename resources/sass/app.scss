@@ -2,7 +2,7 @@
     --red-color: #d54b38;
     --text-size: 23px;
     --text-medium-size: 29px;
-    --text-big-size: 125px;
+    --text-big-size: 100px;
 }
 
 @media screen and (max-width: 1775px) {
@@ -348,6 +348,7 @@ a {
 
         @media screen and (max-width: 480px) {
             max-width: 100%;
+            width: 100%;
             margin-top: 30px;
             margin-bottom: 80px;
             align-items: center;
@@ -456,6 +457,8 @@ a {
 .information {
     position: relative;
     background-color: var(--red-color);
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -737,6 +740,7 @@ a {
     }
 
     &_down-white {
+        display: none;
         &:before {
             background-image: url('/img/arrow-down-white.svg');
         }
