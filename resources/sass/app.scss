@@ -2,14 +2,14 @@
     --red-color: #d54b38;
     --text-size: 23px;
     --text-medium-size: 29px;
-    --text-big-size: 100px;
+    --text-big-size: 29px;
 }
 
 @media screen and (max-width: 1775px) {
     :root {
         --text-size: 1.295774648vw;
         --text-medium-size: 1.633802817vw;
-        --text-big-size: 5.6338vw;
+        --text-big-size: 1.633802817vw;
     }
 }
 
