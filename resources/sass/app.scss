@@ -72,6 +72,14 @@ time, mark, audio, video {
     outline: 0
 }
 
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -97,6 +105,11 @@ a {
 /* css */
 .app {
     overflow-x: auto;
+    padding-top: 90px;
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 70px;
+    }
 }
 
 .container {
@@ -118,14 +131,20 @@ a {
 }
 
 .header {
-    height: 140px;
+    width: 100%;
+    height: 90px;
     background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .5s;
 
-    @media screen and (max-width: 1775px) {
-        height: 7.887323944vw;
+    &.out {
+        transform: translateY(-100%);
     }
 
     @media screen and (max-width: 1024px) {
@@ -771,7 +790,7 @@ a {
     }
 
     &__title {
-        font-size: var(--text-medium-size);
+        font-size: var(--text-size);
         max-width: 322px;
         width: 100%;
         color: var(--red-color);
@@ -789,8 +808,12 @@ a {
         }
     }
 
+    &__title:hover a {
+        color: #898989;
+    }
+
     &__description {
-        font-size: var(--text-medium-size);
+        font-size: var(--text-size);
         max-width: 322px;
         width: 100%;
 

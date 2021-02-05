@@ -31,9 +31,7 @@ $(document).ready(function () {
         $("html, body").animate({scrollTop: scrollTop}, 500);
     })
 
-    function navLink() {
-        let scrollTop = $(window).scrollTop();
-
+    function navLink(scrollTop) {
         if (($("body, html").height() - $(window).height() - 10) < scrollTop) {
             $(`.nav .link_to`).removeClass('nav__link_active');
             $(`.nav .link_to[data-to="contacts"]`).addClass('nav__link_active');
@@ -62,16 +60,32 @@ $(document).ready(function () {
     }
 
     /* paralax */
-    function parallaxScroll() {
-        let scrollTop = $(window).scrollTop();
+    function parallaxScroll(scrollTop) {
         $('.about__photo').css('bottom', (0 - (scrollTop * .25)) + 'px');
     }
     /* end parallax */
 
+    /* menuUp */
+    let scrollPrev = 0;
+    let header = $('.header');
+    function menuUp(scrollTop) {
+        if ( scrollTop > 100 && scrollTop > scrollPrev ) {
+            console.log(scrollTop,scrollPrev);
+            header.addClass('out');
+        } else {
+            header.removeClass('out');
+        }
+
+        scrollPrev = scrollTop;
+    }
+    /* end menuUp */
+
     //event scroll
     $(window).on('scroll', function () {
-        parallaxScroll();
-        navLink();
+        let scrollTop = $(window).scrollTop();
+        parallaxScroll(scrollTop);
+        navLink(scrollTop);
+        menuUp(scrollTop);
     });
 
 });

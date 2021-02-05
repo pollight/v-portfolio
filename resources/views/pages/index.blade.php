@@ -105,7 +105,7 @@
                         <ul class="slider__item">
                             <li>
                                 <div class="slider__title">
-                                    Год: 1989
+                                    <a href="#" target="_blank" class="link">Год: 1989</a>
                                 </div>
                                 <div class="slider__description">
                                     Право международное и национальное
