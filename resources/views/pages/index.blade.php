@@ -22,16 +22,16 @@
 
             <div class="header__nav nav">
                 <div class="nav__item">
-                    <a href="#" class="nav__link nav__link_active">Главная</a>
+                    <a href="#" data-to="home" class="link_to nav__link nav__link_active">Главная</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" class="nav__link">Информация</a>
+                    <a href="#" data-to="info" class="link_to nav__link">Информация</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" class="nav__link">Работы</a>
+                    <a href="#" data-to="work" class="link_to nav__link">Работы</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" class="nav__link">Контакты</a>
+                    <a href="#" data-to="contacts" class="link_to nav__link">Контакты</a>
                 </div>
                 <div class="nav__item">
                     <div class="nav-local">
@@ -45,7 +45,7 @@
     </header>
 
     <div class="content">
-        <div class="about">
+        <div id="home" class="about">
             <img src="/img/photo.png" class="about__photo" alt="">
 
             <div class="about__container container">
@@ -63,14 +63,14 @@
                         Aenean sollicitudin, lorem quis bibendum
                     </p>
 
-                    <button class="about__button button">Информация</button>
+{{--                    <button class="about__button button">Информация</button>--}}
                 </div>
             </div>
 
             <div class="about__arrow arrow arrow_down-white"></div>
         </div>
 
-        <div class="information">
+        <div id="info" class="information">
             <div class="information__text container">
                 <h2 class="information__title title">
                     About Georgiy
@@ -94,7 +94,7 @@
             <div class="information__arrow arrow arrow_down-white"></div>
         </div>
 
-        <div class="list-works">
+        <div id="work" class="list-works">
             <div class="list-works__text container">
                 <h2 class="list-works__title title">
                     Перечень работ
@@ -332,7 +332,7 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer id="contacts"  class="footer">
         <div class="footer__container container">
             <div class="footer__copyright">
                 © 2018 Designed by Fedor Velyaminov
