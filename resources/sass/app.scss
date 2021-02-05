@@ -590,6 +590,8 @@ a {
 
 .footer {
     background-color: var(--red-color);
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
     height: 300px;
     display: flex;
     align-items: center;
