@@ -31,8 +31,8 @@ $(document).ready(function () {
         $("html, body").animate({scrollTop: scrollTop}, 500);
     })
 
-    $(window).on('scroll', function () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    function navLink() {
+        let scrollTop = $(window).scrollTop();
 
         if (($("body, html").height() - $(window).height() - 10) < scrollTop) {
             $(`.nav .link_to`).removeClass('nav__link_active');
@@ -59,5 +59,19 @@ $(document).ready(function () {
             $(`.nav .link_to[data-to="home"]`).addClass('nav__link_active');
 
         /* end nav */
+    }
+
+    /* paralax */
+    function parallaxScroll() {
+        let scrollTop = $(window).scrollTop();
+        $('.about__photo').css('bottom', (0 - (scrollTop * .25)) + 'px');
+    }
+    /* end paralax */
+
+    //event scroll
+    $(window).on('scroll', function () {
+        parallaxScroll();
+        navLink();
     });
+
 });
