@@ -19,6 +19,6 @@ class PageController extends Controller
 //        $content = Content::withTranslation($locale)->get();
 //        dd($content);
 //        $data['content'] = $content;
-        return view("pages.index", $data);
+        return view("pages.index", []);
     }
 }
