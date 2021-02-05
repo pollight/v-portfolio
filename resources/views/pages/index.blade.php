@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>Laravel</title>
+    <title>Вельяминов Г.М.</title>
 </head>
 <body>
 <div id="app" class="app">
@@ -37,7 +37,7 @@
                     <div class="nav-local">
                         <a href="#" class="nav-local__link nav__link nav__link_active">Ru</a>
                         <span>/</span>
-                        <a href="#" class="nav-local__link nav__link">En</a>
+                        <a href="/en" class="nav-local__link nav__link">En</a>
                     </div>
                 </div>
             </div>

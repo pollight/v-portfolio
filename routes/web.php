@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', 'PageController@index');
-
+Route::get('/{locale?}', 'PageController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
