@@ -2,14 +2,14 @@
     --red-color: #d54b38;
     --text-size: 23px;
     --text-medium-size: 29px;
-    --text-big-size: 29px;
+    --text-big-size: 100px;
 }
 
 @media screen and (max-width: 1775px) {
     :root {
         --text-size: 1.295774648vw;
         --text-medium-size: 1.633802817vw;
-        --text-big-size: 1.633802817vw;
+        --text-big-size: 5.6338vw;
     }
 }
 
@@ -485,18 +485,7 @@ a {
     &__title {
         color: #fff;
         margin-bottom: 58px;
-
-        @media screen and (max-width: 2130px) {
-            margin-bottom: 2.723004695vw;
-        }
-
-        @media screen and (max-width: 1775px) {
-            margin-bottom: 3.267605634vw;
-        }
-
-        @media screen and (max-width: 480px) {
-            margin-bottom: 30px;
-        }
+        font-size: var(--text-medium-size);
 
     }
 
