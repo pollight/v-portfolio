@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>Вельяминов Г.М.</title>
+    <title>{{ $content['logo'] ?? ""}}</title>
 </head>
 <body>
 <div id="app" class="app">
     <header class="header">
         <div class="header__container container">
             <div class="header__logo logo">
-                Вельяминов Г.М.
+                {{ $content['logo'] ?? ""}}
             </div>
 
             <div class="header__burger burger">
@@ -22,16 +22,17 @@
 
             <div class="header__nav nav">
                 <div class="nav__item">
-                    <a href="#" data-to="home" class="link_to nav__link nav__link_active">Главная</a>
+                    <a href="#" data-to="home"
+                       class="link_to nav__link nav__link_active">{{ $content['menu_home'] ?? ""}}</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" data-to="info" class="link_to nav__link">Информация</a>
+                    <a href="#" data-to="info" class="link_to nav__link">{{ $content['menu_info'] ?? ""}}</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" data-to="work" class="link_to nav__link">Работы</a>
+                    <a href="#" data-to="work" class="link_to nav__link">{{ $content['menu_work'] ?? ""}}</a>
                 </div>
                 <div class="nav__item">
-                    <a href="#" data-to="contacts" class="link_to nav__link">Контакты</a>
+                    <a href="#" data-to="contacts" class="link_to nav__link">{{ $content['menu_contacts'] ?? ""}}</a>
                 </div>
                 <div class="nav__item">
                     <div class="nav-local">
@@ -51,19 +52,15 @@
             <div class="about__container container">
                 <div class="about__text">
                     <h1 class="about__title title">
-                        Georgy Michailovich Velyaminov
+                        {{ $content['home_title'] ?? ""}}
                     </h1>
                     <h2 class="about__sub-title">
-                        The title
+                        {{ $content['home_sub_title'] ?? ""}}
                     </h2>
 
                     <p class="about__description">
-                        This is Photoshop's version of Lorem Ipsum.
-                        Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum
+                        {{ $content['home_description'] ?? ""}}
                     </p>
-
-{{--                    <button class="about__button button">Информация</button>--}}
                 </div>
             </div>
 
@@ -73,21 +70,11 @@
         <div id="info" class="information">
             <div class="information__text container">
                 <h2 class="information__title title">
-                    About Georgiy
+                    {{ $content['information_title'] ?? ""}}
                 </h2>
 
                 <p class="information__description">
-                    TThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                    sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-                    Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
-                    tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris
-                    in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed
-                    ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat,
-                    velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim. ornare odio.
-                    Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora
-                    torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis
-                    dapibus condimentum sit amet a augue.
+                    {{ $content['information_description'] ?? ""}}
                 </p>
             </div>
 
@@ -97,253 +84,44 @@
         <div id="work" class="list-works">
             <div class="list-works__text container">
                 <h2 class="list-works__title title">
-                    Перечень работ
+                    {{ $content['works_title'] ?? ""}}
                 </h2>
 
                 <div class="list-works__slider slider">
                     <div class="owl-carousel">
-                        <ul class="slider__item">
-                            <li>
-                                <div class="slider__title">
-                                    <a href="#" target="_blank" class="link">Год: 1989</a>
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul class="slider__item">
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul class="slider__item">
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                            <li>
-                                <div class="slider__title">
-                                    Год: 1989
-                                </div>
-                                <div class="slider__description">
-                                    Право международное и национальное
-                                </div>
-                            </li>
-                        </ul>
+                        @foreach($works as $chunk)
+                            <ul class="slider__item">
+                                @foreach($chunk as $work)
+                                    <li>
+                                        <div class="slider__title">
+                                            <a href="{{ Storage::disk('public')->url($work->link) }}" target="_blank"
+                                               class="link">{{ $work->name }}</a>
+                                        </div>
+                                        <div class="slider__description">
+                                            {{ $work->description }}
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer id="contacts"  class="footer">
+    <footer id="contacts" class="footer">
         <div class="footer__container container">
             <div class="footer__copyright">
-                © 2018 Designed by Fedor Velyaminov
+                © {{ $content['copyright'] ?? ""}}
             </div>
 
             <div class="footer__name">
-                Вельяминов Г. М:
+                {{ $content['name'] ?? ""}}
             </div>
             <div class="footer__contacts">
-                <a href="tel:+79098657543" class="footer__phone">+7 909 865 75 43</a>
-                <a href="mailto:Velyaminov@mail.ru" class="footer__mail">Velyaminov@mail.ru</a>
+                <a href="tel:{{ $content['phone'] ?? ""}}" class="footer__phone">{{ $content['phone'] ?? ""}}</a>
+                <a href="mailto:{{ $content['email'] ?? ""}}" class="footer__mail">{{ $content['email'] ?? ""}}</a>
             </div>
         </div>
     </footer>
