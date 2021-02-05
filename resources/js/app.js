@@ -66,7 +66,7 @@ $(document).ready(function () {
         let scrollTop = $(window).scrollTop();
         $('.about__photo').css('bottom', (0 - (scrollTop * .25)) + 'px');
     }
-    /* end paralax */
+    /* end parallax */
 
     //event scroll
     $(window).on('scroll', function () {
