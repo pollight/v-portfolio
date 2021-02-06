@@ -149,6 +149,9 @@ a {
 
     @media screen and (max-width: 1024px) {
         height: 70px;
+        position: absolute;
+        z-index: 11;
+        transform: none !important;
     }
 
     .header__container {
