@@ -15,20 +15,27 @@ $(document).ready(function () {
 
     /* nav */
     $('.burger').on('click', function () {
-        if ($(this).hasClass('burger_active')) {
-            $(this).removeClass('burger_active');
+        burger();
+    })
+
+    function burger() {
+        let burger = $('.burger');
+        if (burger.hasClass('burger_active')) {
+            burger.removeClass('burger_active');
             $('.nav').removeClass('nav_burger-active');
         } else {
-            $(this).addClass('burger_active');
+            burger.addClass('burger_active');
             $('.nav').addClass('nav_burger-active');
         }
-    })
+    }
 
     $('.link_to').on('click', function (e) {
         e.preventDefault();
         let section = $(this).attr('data-to');
         let scrollTop = $(`#${section}`).offset().top;
         $("html, body").animate({scrollTop: scrollTop}, 500);
+        if ($('.nav').hasClass('nav_burger-active'))
+            burger();
     })
 
     function navLink(scrollTop) {
@@ -63,14 +70,15 @@ $(document).ready(function () {
     function parallaxScroll(scrollTop) {
         $('.about__photo').css('bottom', (0 - (scrollTop * .25)) + 'px');
     }
+
     /* end parallax */
 
     /* menuUp */
     let scrollPrev = 0;
     let header = $('.header');
+
     function menuUp(scrollTop) {
-        if ( scrollTop > 100 && scrollTop > scrollPrev ) {
-            console.log(scrollTop,scrollPrev);
+        if (scrollTop > 100 && scrollTop > scrollPrev) {
             header.addClass('out');
         } else {
             header.removeClass('out');
@@ -78,6 +86,7 @@ $(document).ready(function () {
 
         scrollPrev = scrollTop;
     }
+
     /* end menuUp */
 
     //event scroll
